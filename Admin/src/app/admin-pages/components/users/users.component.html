@@ -1,0 +1,139 @@
+<p-toast></p-toast>
+<div class="section-box">
+    <div class="container-admin">
+        <div class="user-option-box">
+            <div class="searce-bar-box">
+                <input type="text" (input)="searchBar($event)" pInputText placeholder="Search for user" /><i class="pi pi-search"></i>
+            </div>
+            <div class="frm-select">
+                <select class="form-select" aria-label="Default select example" (change)="filterByuserType($event)" [(ngModel)]="selectedValue">
+                    <option value='all'>All</option>
+                    <option value='false'>Free</option>
+                    <option value='true'>Paid</option>
+                  </select>
+                  <!-- <select class="form-select" aria-label="Default select example">
+                    <option selected>All region</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select> -->
+            </div>
+            <button pButton type="button" class="create-user-btn" (click)="createUserModal()">Create new user</button>
+            <button pButton type="button" class="block-user-btn" (click)="blockUserModal()">Block User</button>
+            
+        </div>
+        </div>
+        <div class="user-table-box">
+          <p-table [value]="userData" [paginator]="true" [rows]="10" [showCurrentPageReport]="false" [loading]="loader" class="user-data-table">
+            <ng-template pTemplate="header" class="user-data-title">
+                <tr class="user-data-title">
+                  <th style="">NO</th>
+                  <th style="">NAME</th>
+                  <th style="">Email</th>
+                  <th>DATE</th>
+                  <th>PLAN</th>
+                  <th>Total space used</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-user let-rowIndex="rowIndex" class="user-data-body">
+                <tr class="user-data-row">
+                  <td style="">{{rowIndex+1<10? '0'+(rowIndex+1):rowIndex+1}}</td>
+                  <td style="">{{user.firstName ? user.firstName +' '+user.lastName : user.tempName}}</td>
+                  <td style="">{{user.userEmail}}</td>
+                  <td>{{user.createdDate | date:'dd MMM yyyy'}}</td>
+                  <td>{{user.userType}}</td>
+                  <td>{{bytesToSize(user.totalSpaceUsed)}}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+            <!-- <table>
+                <thead>
+                <tr>
+                  <th>NO</th>
+                  <th>NAME</th>
+                  <th>Region</th>
+                  <th>Email</th>
+                  <th>DATE</th>
+                  <th>PLAN</th>
+                  <th>Total space used</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="table-user-bd mt-5" *ngFor="let user of userData;let i = index">
+                  <td>{{i+1<10? '0'+(i+1):i+1}}</td>
+                  <td>{{user.firstName ? user.firstName +' '+user.lastName : user.tempName}}</td>
+                  <td>USA</td>
+                  <td>{{user.userEmail}}</td>
+                  <td>{{user.createdDate | date:'dd MMM yyyy'}}</td>
+                  <td>{{user.userType}}</td>
+                  <td>{{bytesToSize(user.totalSpaceUsed)}}</td>
+
+                </tr>
+                <tr class="table-user-bd mt-5">
+                    <td>01</td>
+                    <td>Luciano Santino/td>
+                    <td>USA</td>
+                    <td>Luciano Santino@gmail.com</td>
+                    <td>07-01-2020</td>
+                    <td>Free</td>
+                    <td>3 GB</td>
+  
+                  </tr>
+                  <tr class="table-user-bd mt-5">
+                    <td>01</td>
+                    <td>Luciano Santino/td>
+                    <td>USA</td>
+                    <td>Luciano Santino@gmail.com</td>
+                    <td>07-01-2020</td>
+                    <td>Free</td>
+                    <td>3 GB</td>
+  
+                  </tr>
+                <tr>
+                    <td>01</td>
+                    <td>Luciano Santino/td>
+                    <td>USA</td>
+                    <td>Luciano Santino@gmail.com</td>
+                    <td>07-01-2020</td>
+                    <td>Free</td>
+                    <td>3 GB</td>
+  
+                  </tr> 
+               </tbody>
+              </table>  -->
+              <!-- <p-paginator [rows]="10" [totalRecords]="userData.length" [rowsPerPageOptions]="[10,20,30]"></p-paginator> -->
+        </div>
+    <!-- </div> -->
+</div>
+
+<div class="createUser" *ngIf="displaycreateUserModal">
+  <p-dialog [header]='""' [modal]="true" [dismissableMask]="true" [draggable]="false" [(visible)]="displaycreateUserModal"
+    [style]="{width: '390px'}" [baseZIndex]="10000">
+
+   <!-- <app-add-user [formReset]='createFormReset'></app-add-user> -->
+   <ng-template pTemplate="header">
+    <div class="create-form-title">
+        <h3>Create User</h3>
+    </div>
+</ng-template>
+
+   <app-add-user [formReset]='createFormReset'  (hideCreateUserModal)="cancelCreateUserModal($event)" (resData)="createUserAPIRES($event)"></app-add-user>
+
+  </p-dialog>
+</div>
+
+<div class="blockUser" *ngIf="displayblockUserModal">
+  <p-dialog [header]='""' [modal]="true" [dismissableMask]="true" [draggable]="false" [(visible)]="displayblockUserModal"
+    [style]="{width: '390px'}" [baseZIndex]="10000">
+
+    <!-- <app-block-user [formReset]='blockFormReset'></app-block-user> -->
+    <ng-template pTemplate="header">
+      <div class="paiduser-form-title">
+          <h3>Paid User</h3>
+      </div>
+  </ng-template>
+
+    <app-block-user [formReset]='blockFormReset' (hideBlockUserModal)="cancelBlockUserModal($event)" (resData)="blockUserAPIRES($event)"></app-block-user>
+
+  </p-dialog>
+</div>

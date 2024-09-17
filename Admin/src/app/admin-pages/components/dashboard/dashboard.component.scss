@@ -1,0 +1,621 @@
+* {
+    --scrollbarBG: #35354400;
+    --thumbBG: #6149CD;
+  }
+  .createUser,.blockUser {
+    height: 300px;
+    overflow-y: scroll;
+  }
+  
+  .createUser,.blockUser::-webkit-scrollbar {
+    width: 15px;
+    padding-left: 3px;
+  }
+  
+  .createUser,.blockUser {
+    scrollbar-width: thin;
+    padding: 5px;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  }
+  
+  .createUser,.blockUser::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+  
+  }
+  
+  .createUser,.blockUser::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG);
+    border-radius: 8px;
+    border: 8px solid var(--scrollbarBG);
+  }
+body {
+    background-color: #131517;
+}
+
+
+
+
+
+
+
+.section-box {
+    width: calc(100% - 228px);
+    float: left;
+    height: calc(100vh - 100px);
+    overflow: auto;
+}
+
+.container-admin {
+    padding: 0 25px;
+    width: 100%;
+
+}
+
+.info-list-box {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    padding: 25px 0;
+}
+
+.info_list {
+    width: calc(20% - 20px);
+    float: left;
+    overflow: hidden;
+    margin-right: 25px;
+}
+
+.inf-contentbox {
+    width: 100%;
+    float: left;
+    height: 165px;
+    overflow: hidden;
+
+    h2 {
+        margin: 0;
+        font-size: 22px;
+        line-height: 33px;
+        color: #fff;
+    }
+}
+
+.register-box {
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    background-color: #1E1F25;
+    overflow: hidden;
+
+    &:hover {
+        border: 1px solid #29BB89;
+        overflow: hidden;
+    }
+}
+
+.inf-title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    color: #fff;
+    height: 40px;
+    display: flex;
+    align-items: center;
+
+    span {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        margin-right: 10px;
+    }
+}
+
+.registration-symbol {
+    background-color: #29BB89;
+}
+
+.user-list {
+    display: flex;
+    text-align: center;
+    list-style-type: none;
+    width: 100%;
+}
+
+.user-list .user-count {
+    border-right: 1px solid #707070;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span {
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 400;
+        color: #707070;
+    }
+
+    h2 {
+        margin: 0;
+        font-size: 22px;
+        line-height: 33px;
+        color: #fff;
+    }
+}
+
+.user-list .user-count:last-child {
+    border: none;
+}
+
+.user-count {
+    padding-bottom: 40px;
+}
+
+.user-box {
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    background-color: #1E1F25;
+    overflow: hidden;
+
+    &:hover {
+        border: 1px solid #307BF4;
+        overflow: hidden;
+    }
+
+    .users {
+        display: flex;
+        text-align: center;
+    }
+
+}
+
+.total-Users-symbol {
+    background-color: #307BF4;
+}
+
+.Free-Users-symbol {
+    background-color: #FF0073;
+}
+
+.free-users-box {
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    background-color: #1E1F25;
+    overflow: hidden;
+
+    &:hover {
+        border: 1px solid #FF0073;
+        overflow: hidden;
+    }
+
+    .free-users {
+        display: flex;
+        text-align: center;
+    }
+
+}
+
+.paid-users-box {
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    background-color: #1E1F25;
+    overflow: hidden;
+
+    &:hover {
+        border: 1px solid #724EE6;
+        overflow: hidden;
+    }
+
+    .paid-users {
+        display: flex;
+        text-align: center;
+    }
+
+}
+
+.paid-users-symbol {
+    background-color: #724EE6;
+}
+
+.info-list-box .info_list:last-child {
+    margin-right: 0;
+}
+
+
+.used-data {
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    line-height: 44px;
+    font-weight: 600;
+    color: #fff;
+}
+
+
+.storage-list {
+    display: flex;
+    text-align: center;
+    list-style-type: none;
+    width: 100%;
+    border-top: 1px solid #707070;
+
+}
+
+.storage-list .storage-count {
+    border-right: 1px solid #707070;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5%;
+
+    span {
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 400;
+        color: #707070;
+        margin-top: 10px;
+    }
+
+    h2 {
+        margin: 0;
+        font-size: 22px;
+        line-height: 33px;
+        color: #fff;
+    }
+}
+
+.storage-list .storage-count:last-child {
+    border: none;
+}
+
+.storage-box {
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    background-color: #1E1F25;
+    overflow: hidden;
+
+    &:hover {
+        border: 1px solid #F6C059;
+        overflow: hidden;
+    }
+}
+
+.used-storage-symbol {
+    background-color: #F6C059;
+}
+
+
+.userdetails-chart-list {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user-chart-list {
+    width: 100%;
+    float: left;
+
+
+}
+
+.chart-box {
+    width: 100%;
+    float: left;
+    height: 420px;
+    // overflow: hidden;
+    background-color: #1E1F25;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 100px;
+    // overflow: auto;
+}
+
+.user-countrie-list {
+    width: 25%;
+    float: left;
+}
+
+.us-chart-title {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 600px;
+    color: #fff;
+}
+
+.countrie-list {
+    width: 100%;
+    float: left;
+    height: 420px;
+    overflow: auto;
+    background-color: #1E1F25;
+    border-radius: 10px;
+    padding: 0 5px;
+
+}
+
+.us-ct-title {
+    background-color: #1E1F25;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 600;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.head-row-tab {
+    background-color: #131517;
+
+    th {
+        color: #fff;
+    }
+}
+
+.head-title {
+    width: 100%;
+    display: flex;
+    background: #131517;
+
+    div {
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        font-size: 15px;
+        line-height: 18px;
+        font-weight: 400;
+        padding: 10px 0;
+    }
+}
+
+.data-list {
+    width: 100%;
+    display: flex;
+    padding: 8px 0;
+
+    div {
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+}
+
+.table-content {
+    padding: 10px 0;
+}
+
+//   user option css start
+.user-option-box {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 25px;
+
+    button {
+        width: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        height: 45px;
+        border: none;
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 400;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+}
+
+.create-user-btn {
+    background-color: #397EF5;
+}
+
+.block-user-btn {
+    background-color: #E05A65;
+
+    &:hover {
+        background-color: #E05A65;
+    }
+}
+
+.create-form-title {
+    h3 {
+        font-size: 16px;
+        margin: 0;
+        line-height: 23px;
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+    }
+}
+.paiduser-form-title{
+    h3 {
+        font-size: 16px;
+        margin: 0;
+        line-height: 23px;
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+    }
+}
+
+.searce-bar-box {
+    background: #1E1F25;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+
+    input {
+        background: none;
+        border: none;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 20px;
+        color: #84849D;
+    }
+
+    i {
+        color: #fff;
+        font-size: 12px;
+    }
+}
+
+.searce-bar-box input:focus:focus-visible {
+    outline: unset;
+}
+
+.us-chart-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.p-calender-grp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+::ng-deep .p-inputtext {
+    border-radius: 50px;
+    height: 45px;
+}
+
+::ng-deep .p-datepicker.p-component.ng-star-inserted {
+    top: 50px !important;
+
+}
+
+.paid-user-list {
+    display: flex;
+    text-align: center;
+    list-style-type: none;
+    width: 100%;
+}
+
+
+
+// ::ng-deep .p-calendar .p-datepicker table td > span.p-highlight{
+//     background: linear-gradient(to right, #33ccff 0%, #ff99cc 100%);
+// }
+
+// ::ng-deep .p-calendar .p-datepicker table tbody tr{
+
+// }
+.year-select-box {
+    select {
+        background: none;
+        color: #7A86A1;
+        border: none;
+        font-size: 14px;
+        font-weight: 400;
+
+    }
+
+    option {
+        background-color: #fff;
+        padding: 20px;
+        color: #7A86A1;
+        border: none;
+        font-size: 14px;
+        font-weight: 400;
+        border-radius: 50px;
+        overflow: hidden;
+
+    }
+
+    option:hover {
+        background-color: #FFF4F2 !important;
+        color: #000000;
+        font-weight: 600;
+    }
+}
+
+
+// responsive css start
+@media only screen and (max-width: 1200px) {
+    .pre-logo-title h2{
+        margin: 0;
+        font-size: 25px;
+    }
+    .inf-title {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .used-data {
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    .storage-list .storage-count h2 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .storage-list .storage-count span {
+        font-size: 12px;
+        line-height: 15px;
+        margin-top: 5px;
+    }
+
+    .user-option-box button {
+        width: 125px;
+        height: 35px;
+    }
+
+    .p-inputtext {
+        height: 40px;
+    }
+    .section-box {
+        width: calc(100% - 190px);
+        float: left;
+      }
+}
+@media only screen and (max-width: 992px) {
+    .info_list{
+        width: 100%;
+        float: left;
+        overflow: hidden;
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+      .chart-box {
+        width: 100%;
+        float: left;
+        height: 375px;
+        margin-bottom: 50px;
+      }
+     
+      .p-inputtext {
+        border-radius: 50px;
+       height: 30px;
+        font-size: 10px;
+    }
+}

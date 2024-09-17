@@ -1,0 +1,96 @@
+<!-- <body>
+  <div class="d-flex justify-content-center welcome-email-top">
+    <div class="creative-title py-5">
+      <div class="row">
+        <div class="col-12">
+          <h4 class="logo-brand">
+            Prevueit
+          </h4>
+          <h1 class="welcome-text mt-5">
+            Welcome to
+            <br>Prevueit
+          </h1>
+          <div class="d-flex justify-content-center w-full">
+            <ng-lottie width="316px" height="316px" [options]="options"></ng-lottie>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center">
+    <div *ngIf="!sentPhoneNumber">
+      <h4 class="text-white my-4">
+        Enter Your Phone Number
+      </h4>
+      <p class="text-white text-center">
+        We will send you 4 digit of code
+      </p>
+      <input type="number" class="form-control mb-3" placeholder="mobile" aria-label="Default">
+      <div class="d-flex justify-content-center py-5">
+        <button type="button" class="btn text-center btn-otp" (click)="generateOTP()">Generate OTP</button>
+      </div>
+    </div>
+    <div *ngIf="sentPhoneNumber">
+      <h4 class="text-white text-center my-4">
+        OTP Verification
+      </h4>
+      <p class="text-white text-center">
+        Enter the otp send to
+      </p>
+      <div class="otp-input">
+        <ngx-otp-input [config]="otpInputConfig" (otpChange)="handeOtpChange($event)" (fill)="handleFillEvent($event)">
+        </ngx-otp-input>
+      </div>
+      <p class="text-white text-center" *ngIf="!showTime">Didn't recevie OTP? <a class="text-danger" (click)="startCounter()">Resend</a></p>
+      <p class="text-white text-center" *ngIf="showTime">Resend OTP in {{showTime}}</p>
+      <div class="d-flex justify-content-center py-5">
+        <button type="button" class="btn text-center btn-otp">Verify & Continue</button>
+      </div>
+    </div>
+  </div>
+</body> -->
+<div class="section">
+  <div class="row w-full text-align-center">
+    <div class="col-12 pt-5 text-align-center d-flex justify-content-center w-full flex-column align-items-center">
+        <div class="logobox-auth mt-5">
+            <img src="../../assets/Prevueit logo.png">
+        </div>
+        <div class="logo-text text-align-center d-flex justify-content-center w-full">
+          Bharatransfer
+        </div>
+        <div class="auth-title text-align-center d-flex justify-content-center w-full pt-5">
+          Log in
+        </div>
+        <div class="auth-sub-title text-align-center d-flex justify-content-center w-full">
+          sign in to access admin panel
+        </div>
+    </div>
+    <div class="col-12 mt-3">
+      <div class="row justify-content-center">
+      <div class=" auth-email-card col-5 d-flex justify-content-center">
+        <div class="email-box px-4">
+          <div class="d-flex align-items-center row ">
+          <fieldset class="scheduler-border col-9">
+            <legend class="scheduler-border">Your Email/Username</legend>
+        
+                <div class="d-flex justify-content-left py-1">
+                    <input type="text" class="datetime"  placeholder="" />
+                    
+                </div>
+        </fieldset>
+        <div class="col-3 px-0">
+        <button>Let's Go</button>
+        </div>
+        </div>
+        <div class="d-flex justify-content-between mt-4 row">
+          <div class="d-flex align-items-center">
+            <input type="checkbox" class="remember-input"><label>Remember Me</label>
+          </div>
+          <a>Forgot Password</a>
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>

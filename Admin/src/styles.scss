@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@font-face {
+  font-family: myVIntageFont;
+  src: url(assets/font/VIntage.otf);
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.vintage-title {
+  color: #5338ac;
+  font-family: myVIntageFont !important;
+  font-size: 30px;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #131517;
+
+}
+
+.lottie—bg {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  mix-blend-mode: luminosity;
+  overflow: hidden;
+  top: -117px;
+}
+
+::ng-deep .lottie—bg ng-lottie svg {
+  width: 1872px !important;
+  top: -117px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.p-paginator-bottom.p-paginator.p-component {
+  background: #131517 !important;
+  border: unset;
+  margin-top: 20px;
+}
+// #pr_id_2-table {
+//   height: 95vh !important;
+//   display: block;
+// }
+@media only screen and (max-width: 1200px) {
+  .section-box {
+    width: calc(100% - 190px);
+    float: left;
+  }
+  
+}

@@ -1,0 +1,21 @@
+<ng-template pTemplate="header">
+    <div class="create-form-title">
+        <h3>Block user</h3>
+    </div>
+</ng-template>
+
+<div class="block-form-box">
+    <form class="block-form" [formGroup]="blockUserForm">
+    <div class="type-create-user">
+        <p>Type</p>
+        <div class="switch-block-user"><span>Block only</span> <p-inputSwitch formControlName="blockType" (onChange)="changeInputType()"></p-inputSwitch><span>Permanently Delete</span></div>
+    </div>
+        <label>Email</label><br>
+        <input type="email" placeholder="Enter email.." formControlName="email"><br>
+        <div class="text-danger text-center" *ngIf="isSubmitted && blockUserForm.get('email')?.hasError('required')">Please Enter E-mail</div>
+        <div class="text-danger text-center" *ngIf="isSubmitted &&  blockUserForm.get('email')?.hasError('pattern')">Plese Enter Valid E-mail</div>
+          <label>Remarks</label><br>
+          <input type="text" placeholder="Remarks" formControlName="remarks"><br>
+          <button pButton type="button" class="Block-frm-user-btn" (click)="blockUser()">Block</button>
+    </form>
+</div>

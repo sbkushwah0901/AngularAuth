@@ -1,0 +1,157 @@
+
+// :host{
+//     body
+// {
+//     background: #151515 0% 0% no-repeat padding-box;
+//     height: 100%;
+// }
+// .welcome-email-top {
+//     height: 517px;
+//     width: 100%;
+//     background: #805cde;
+//     background: -webkit-linear-gradient(to bottom, rgba(128, 92, 222, 0.5), rgba(54, 29, 120, 0.5));
+//     background: linear-gradient(to bottom, rgba(128, 92, 222, 0.5), rgba(54, 29, 120, 0.5));
+//     border-bottom-left-radius: 50px;
+//     border-bottom-right-radius: 50px;
+// }
+// .creative-title {
+//     color: #5338ac;
+//     font-size: 65px;
+//     text-align: center;
+//     font-family: myVIntageFont;
+// }
+// .logo-brand {
+//     color: white;
+//     text-decoration: none;
+//     font-family: myVIntageFont;
+//     font-size: 34px;
+//     margin: 0;
+// }
+
+// .welcome-text {
+//     text-align: center;
+//     letter-spacing: 0px;
+//     color: #FFFFFF;
+//     font-size: 50px;
+// }
+
+// .w-full {
+//     width: 100%;
+// }
+// .otp-input
+// {
+//     display: flex;
+//     justify-content: center;    
+// }
+// .otp-input input
+// {
+//     width: 45px;
+//     margin: 5px;
+// }
+// .btn-otp
+// {
+//     background: #7B57D8 0% 0% no-repeat padding-box;
+// border-radius: 8px;
+// color: white;
+// }
+// }
+:host{
+.section{
+    width: 100%;
+    height: 100vh;
+    background: transparent linear-gradient(123deg, #FCE9E1 0%, #E2EBFA 100%) 0% 0% no-repeat padding-box;
+    .logobox-auth{
+        width: 100px;
+        height: 100px;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .logo-text{
+    color: #453088;
+    font-size: 12px;
+    }
+    .auth-title{
+        font-size: 30px;
+        line-height: 37px;
+        font-weight: 500;
+        color: #5b5a64;
+    }
+    .auth-sub-title{
+        font-size: 14px;
+        line-height: 27px;
+        color: #5b5a648b;
+        font-weight: 300;
+    }
+    }
+}
+.auth-email-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+}
+.email-box{
+    width: 100%;
+fieldset.scheduler-border {
+    border: 1px groove #453088 !important;
+    border-radius: 5px;
+    padding-left: 14px;
+    
+}
+
+legend.scheduler-border {
+    font-size: 12px !important;
+    text-align: left !important;
+    margin-bottom: 0;
+   
+}
+legend {
+    display: block;
+    width: 39%;
+}
+input{
+    
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #453088;
+    font-size: 14px;
+    border: unset;
+    &:focus{
+        outline: unset;
+    }
+
+}
+.remember-input{
+    width:15px;
+    height: 15px;
+    margin-right: 10px;
+}
+button{
+    border: unset;
+    background-color: #453088;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: -5px;
+    height: 43px;
+    margin-top: 8px;
+    width: 100%;
+}
+label{
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0;
+    color: #5b5a648b;
+}
+a{
+    font-size: 12px;
+    font-weight: 600;
+    color: #a9dbff;
+}
+}

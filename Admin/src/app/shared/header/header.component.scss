@@ -1,0 +1,57 @@
+
+// header css start
+.header-row {
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1E1F25;
+    padding:0 60px;
+    overflow: hidden;
+}
+.pre-logo-title{
+    
+    text-align: center;
+    h2{
+        margin: 0;
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 40px;
+        color: #fff;
+    }
+    span{
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 400;
+        color: #fff;
+        margin: 0;
+    }
+}
+.admin-option-btn{
+   
+    h4{
+        margin: 0;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 600;
+        color: #FFFFFF;
+    }
+    span{
+        margin: 0;
+        color: #9598AE;
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+.notification-admin-box {
+    display: flex;
+    align-items: center;
+    i{
+        margin-right: 20px;
+        color: #898997;
+        font-size: 16px;
+    }
+  }
+//  header css end

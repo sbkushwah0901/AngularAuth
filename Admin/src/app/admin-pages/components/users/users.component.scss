@@ -1,0 +1,310 @@
+* {
+  --scrollbarBG: #35354400;
+  --thumbBG: #6149CD;
+}
+
+.createUser,
+.blockUser {
+  height: 300px;
+  overflow-y: scroll;
+}
+
+.createUser,
+.blockUser::-webkit-scrollbar {
+  width: 11px;
+  padding-left: 3px;
+}
+
+.createUser,
+.blockUser {
+  scrollbar-width: thin;
+  padding: 5px;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+.createUser,
+.blockUser::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+
+}
+
+.createUser,
+.blockUser::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
+body {
+  background-color: #131517;
+}
+
+
+
+
+.section-box {
+  width: calc(100% - 228px);
+  float: left;
+}
+
+.container-admin {
+  padding: 0 25px;
+  width: 100%;
+
+}
+
+// user option css start
+.user-option-box {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 25px 0;
+
+  button {
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    height: 45px;
+    border: none;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+}
+
+.create-user-btn {
+  background-color: #397EF5;
+}
+
+.block-user-btn {
+  background-color: #E05A65;
+}
+
+.searce-bar-box {
+  background: #1E1F25;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+
+  input {
+    background: none;
+    border: none;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #84849D;
+  }
+
+  i {
+    color: #fff;
+    font-size: 12px;
+  }
+}
+
+.searce-bar-box input:focus:focus-visible {
+  outline: unset;
+}
+
+
+//    usertable css start
+.user-table-box {
+  width: 100%;
+  float: left;
+
+  // padding: 25px;
+  table {
+    width: 100%;
+    border: unset;
+
+    td {
+      text-align: center;
+      color: #fff;
+      padding: 10px 0;
+    }
+
+    thead {
+      background-color: #1E1F25;
+    }
+
+    th {
+      text-align: center;
+      font-size: 15px;
+      font-weight: 400;
+      color: #fff;
+      padding: 8px 0;
+    }
+
+  }
+}
+
+th,
+td {
+  border-style: none;
+}
+
+.tbody {
+  height: 400px !important;
+  overflow: hidden;
+  td {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    padding: 8px 0;
+  }
+}
+
+.inf-title {
+  display: flex;
+  align-items: center;
+}
+
+.frm-select {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  select {
+    margin-left: 20px;
+    border-radius: 10px;
+    height: 35px;
+    width: 100px;
+    padding: 0 10px;
+    border: 1px solid #585858;
+    background: transparent;
+    color: #FFFFFF;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+.user-data-row {
+  background-color: #131517 !important;
+  color: #FFF;
+
+  td {
+    font-size: 18px;
+    border: unset;
+    padding: 10px 20px;
+    line-height: 22px;
+    color: #fff;
+font-weight: 400;
+  }
+}
+
+.user-data-row td:first-child {
+  padding-left: 25px;
+}
+
+.user-data-title {
+  background-color: #1E1F25 !important;
+
+  th {
+    font-size: 15px;
+    line-height: 18px;
+    padding: 10px 20px 10px 20px;
+    color: #FFFFFF;
+    background-color: #1E1F25 !important;
+    border: none;
+    font-weight: 300;
+  }
+}
+
+.user-data-title th:first-child {
+  padding-left: 25px;
+}
+
+.p-paginator-bottom.p-paginator.p-component {
+  background: #000 !important;
+}
+
+.p-datatable {
+  min-height: 80vh;
+}
+
+.create-form-title {
+  h3 {
+    font-size: 16px;
+    margin: 0;
+    line-height: 23px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+.paiduser-form-title {
+  h3 {
+    font-size: 16px;
+    margin: 0;
+    line-height: 23px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+  }
+}
+#pr_id_2-table {
+  height: 400px !important;
+  display: block;
+}
+// responsive css start
+@media only screen and (max-width: 1200px) {
+  .user-option-box {
+    button{
+      width: 125px;
+      height: 35px;
+    }
+  }
+  .user-data-row td {
+    font-size: 12px;
+    border: unset;
+    padding: 10px 0;
+    line-height: 13px;
+  }
+  .user-data-title th {
+    font-size: 12px;
+    padding: 0 70px 0 0;
+    line-height: 15px;
+  }
+  .section-box {
+    width: calc(100% - 190px);
+    float: left;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+.user-option-box {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 25px 0;
+  flex-wrap: wrap;
+}
+.searce-bar-box {
+  width: calc(80% - 10px);
+  margin-right: 10px;
+  input{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+.frm-select {
+  width: 20%;
+}
+.frm-select select {
+  margin-left: 0;
+}
+.user-option-box button{
+ margin-top: 10px;
+ margin-left: 0;
+ margin-right: 30px;
+}
+.user-title-box{
+  font-size: 20px;
+  line-height: 27px;
+}
+}

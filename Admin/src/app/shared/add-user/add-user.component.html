@@ -1,0 +1,31 @@
+    <!-- <div class="create-form-title">
+        <h3>Create new user</h3>
+    </div> -->
+  <div class="create-form-box">
+        <form class="create-form" [formGroup]="createUserForm">
+        <div class="type-create-user">
+            <p>Type</p>
+            <div class="switch-create-user"><span>free</span> <p-inputSwitch formControlName="userType"></p-inputSwitch><span>paid</span></div>
+        </div>
+            <label>Email</label><br>
+            <input type="email" placeholder="Enter email.." formControlName="email"><br>
+            <div class="text-danger text-center" *ngIf="isSubmitted && createUserForm.get('email')?.hasError('required')">Please Enter E-mail</div>
+            <div class="text-danger text-center" *ngIf="isSubmitted &&  createUserForm.get('email')?.hasError('pattern')">Plese Enter Valid E-mail</div>
+            <label>First Name</label><br>
+            <input type="text" placeholder="Enter name.." formControlName="firstName"><br>
+            <div class="text-danger text-center" *ngIf="isSubmitted && createUserForm.get('firstName')?.hasError('required')">Please Enter First Name</div>
+            <label>Last Name</label><br>
+            <input type="text" placeholder="Enter name.." formControlName="lastName"><br>
+            <div class="text-danger text-center" *ngIf="isSubmitted && createUserForm.get('firstName')?.hasError('required')">Please Enter Last Name</div>
+            <label>Phone</label><br>
+            <input type="number" placeholder="Enter phone.." formControlName="phoneNumber"><br>
+            <label>Country</label><br>
+            <select aria-placeholder="Choose Country" formControlName="country">
+                <option value="one">india</option>
+                <option value="one">USA</option>
+              </select><br>
+              <label>Remarks</label><br>
+              <input type="text" placeholder="Remarks" formControlName="remarks"><br>
+              <button pButton type="button" class="create-new user-btn" (click)="createUser()">Create new user</button>
+        </form>
+  </div>

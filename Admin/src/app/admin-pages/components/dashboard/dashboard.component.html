@@ -1,0 +1,218 @@
+<p-toast></p-toast>
+<div class="section-box">
+    <div class="container-admin">
+        <div class="user-option-box">
+            <button pButton type="button" class="create-user-btn" (click)="createUserModal()">Create new user</button>
+            <button pButton type="button" class="block-user-btn" (click)="blockUserModal()">Block User</button>
+            <!-- <div class="searce-bar-box">
+                <input type="text" pInputText placeholder="Search for user" /><i class="pi pi-search"></i>
+            </div> -->
+        </div>
+        <div *ngIf="loader">
+            <ng-lottie width="316px" height="316px" [options]="options"></ng-lottie>
+        </div>
+        <div class="info-list-box" *ngIf="!loader">
+
+            <div class="info_list">
+                <div class="inf-contentbox">
+                    <div class="register-box">
+                        <div class="inf-title">
+                            <span class="registration-symbol"></span>Registrations Today
+                        </div>
+                        <div class="user-list">
+                            <div class="user-count">
+                                <span>Free Users</span>
+                                <h2>{{countData.todayFreeUser}}</h2>
+                            </div>
+                            <div class="user-count">
+                                <span>Paid Users</span>
+                                <h2>{{countData.todayPaidUser}}</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info_list">
+                <div class="inf-contentbox">
+                    <div class="user-box">
+                        <div class="inf-title">
+                            <span class="total-Users-symbol"></span>Total Users
+                        </div>
+                        <div class="users">
+                            <h2>{{countData.totalUserCount}}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info_list">
+                <div class="inf-contentbox">
+                    <div class="free-users-box">
+                        <div class="inf-title">
+                            <span class="Free-Users-symbol"></span>Free Users
+                        </div>
+                        <div class="free-users">
+                            <h2>{{countData.freelUserCount}}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info_list">
+                <div class="inf-contentbox">
+                    <div class="paid-users-box">
+                        <div class="inf-title">
+                            <span class="paid-users-symbol"></span>Paid Users
+                        </div>
+                        <div class="paid-users">
+                            <h2>{{countData.paidUserCount}}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info_list">
+                <div class="inf-contentbox">
+                    <div class="storage-box">
+                        <div class="inf-title">
+                            <span class="used-storage-symbol"></span>Total Used Storage
+                        </div>
+                        <div class="used-data">
+                            {{bytesToSize(countData.totalSpaceUsed)}}
+                        </div>
+                        <div class="storage-list">
+                            <div class="storage-count">
+                                <span>Free Users</span>
+                                <h2>{{bytesToSize(countData.freeUserSpace)}}</h2>
+                            </div>
+                            <div class="storage-count">
+                                <span>Paid Users</span>
+                                <h2>{{bytesToSize(countData.paidUserSpace)}}</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+        <div class="userdetails-chart-list">
+            <div class="user-chart-list">
+                <div class="chart-box">
+                    <div class="us-chart-title">
+                        <div>
+                            <p>Users</p>
+                        </div>
+                        <div>
+                            <p class="p-calender-grp">
+                                <p-calendar [(ngModel)]="rangeDates" selectionMode="range" #calendar
+                                    [readonlyInput]="true" (onSelect)="onSelect()" inputId="range cal-input"
+                                    icon="pi pi-calendar"></p-calendar>
+                            </p>
+                        </div>
+                        <div>
+                            <p class="p-calender-grp frm-select year year-select-box ">
+                                <select class="form-select" aria-label="Default select example"
+                                    (change)="filterByDropdown($event)" [(ngModel)]="selectedLimit">
+                                   
+                                        <option value='year' class="bg-wt">Year</option>
+                                    <option value='today'>Today</option>
+                                    <option value='yesterday'>Yesterday</option>
+                                    <option value='thisWeek'>This Week</option>
+                                    <option value='lastWeek'>Last Week</option>
+                                    <option value='thisMonth'>This Month</option>
+                                    <option value='lastMonth'>Last Month</option>
+                                    <option value='custom'  class="bg-wt">Custom</option>
+                                   
+                                </select>
+                            <p></p>
+                        </div>
+                    </div>
+                    <!-- <div class="field col-12 md:col-4">
+                        <label for="range">Range</label>
+
+                    </div> -->
+                    <div id="products" style="width:100% ;height:300px"></div>
+                </div>
+            </div>
+            <!-- <div class="user-countrie-list" *ngIf="!loader">
+                <div class="countrie-list">
+                    <div class="us-ct-title">Top Countries</div>
+                    <div class="head-title">
+                        <div>NO</div>
+                        <div>Region</div>
+                        <div>Users</div>
+                    </div>
+                    <div class="table-content">
+                        <div class="data-list">
+                            <div>01</div>
+                            <div>USA</div>
+                            <div>USA</div>
+                        </div>
+                        <div class="data-list">
+                            <div>01</div>
+                            <div>USA</div>
+                            <div>USA</div>
+                        </div>
+                        <div class="data-list">
+                            <div>01</div>
+                            <div>USA</div>
+                            <div>USA</div>
+                        </div>
+                        <div class="data-list">
+                            <div>01</div>
+                            <div>USA</div>
+                            <div>USA</div>
+                        </div>
+                        <div class="data-list">
+                            <div>01</div>
+                            <div>USA</div>
+                            <div>USA</div>
+                        </div>
+                        <div class="data-list">
+                            <div>01</div>
+                            <div>USA</div>
+                            <div>USA</div>
+                        </div>
+                        <div class="data-list">
+                            <div>01</div>
+                            <div>USA</div>
+                            <div>USA</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+
+<div class="createUser" *ngIf="displaycreateUserModal">
+    <p-dialog [header]='""' [modal]="true" [dismissableMask]="true" [draggable]="false"
+        [(visible)]="displaycreateUserModal" [style]="{width: '390px'}" [baseZIndex]="10000">
+
+        <!-- <app-add-user [formReset]='createFormReset'></app-add-user> -->
+        <ng-template pTemplate="header">
+            <div class="create-form-title">
+                <h3>Create User</h3>
+            </div>
+        </ng-template>
+        <app-add-user [formReset]='createFormReset' (hideCreateUserModal)="cancelCreateUserModal($event)" (resData)="createUserAPIRES($event)"></app-add-user>
+
+    </p-dialog>
+</div>
+
+<div class="blockUser" *ngIf="displayblockUserModal">
+    <p-dialog [header]='""' [modal]="true" [dismissableMask]="true" [draggable]="false"
+        [(visible)]="displayblockUserModal" [style]="{width: '390px'}" [baseZIndex]="10000">
+
+        <!-- <app-block-user [formReset]='blockFormReset'></app-block-user> -->
+        <ng-template pTemplate="header">
+            <div class="paiduser-form-title">
+                <h3>Block User</h3>
+            </div>
+        </ng-template>
+
+        <app-block-user [formReset]='blockFormReset' (hideBlockUserModal)="cancelBlockUserModal($event)" (resData)="blockUserAPIRES($event)"></app-block-user>
+
+    </p-dialog>
+</div>

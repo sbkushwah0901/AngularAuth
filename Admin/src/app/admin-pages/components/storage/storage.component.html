@@ -1,0 +1,130 @@
+<div class="section-box">
+    <div class="container-admin">
+        <div class="row avalablestoragedata-box">
+            <!-- <div class="col col-12 col-md-5">
+                <div class="avalabale-storage-box row me-0 ms-0">
+                    <div class="col-6">
+                        <div class="storagechart-box">
+                            <div id="gauge" style="width:100% ;height:300px"></div>
+                        </div>
+                    </div>
+                    <div class="col col-6">
+                        <div class="storage-titel">
+                            Available Storage
+                            <p>156GB / 512GB</p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class=" col col-12 col-md-7 limit-user" *ngIf="!loader">
+                <div class="user-limit-box row"> 
+                    <div class="user-title-box col-12">
+                        User Data limit
+                    </div>
+                    <div class="col col-6">
+                        <div class="free-user-list">
+                            <div class="fr-us-title">
+                                {{spaceData[1].userType}}
+                            </div>
+                            <ul class="ac-user-count-list">
+                                <li>
+                                    <p>Total Active Users</p>
+                                    <h2>{{spaceData[1].userCount}}</h2>
+                                </li>
+                                <li>
+                                    <p>Storage Limit</p>
+                                    <h2>{{spaceData[1].totalSpaceAllowed}}</h2>
+                                </li>
+                                <li>
+                                    <p>Per Transfer Limit</p>
+                                    <h2>{{spaceData[1].perFileUploadLimit}}</h2>
+                                </li>
+                            </ul>
+                            <button type="button" class="configure-freeuser" (click)="freeUserModal(spaceData[1].perFileUploadLimit,spaceData[1].totalSpaceAllowed,'Free User',2)">Configure</button>
+                        </div>
+                    </div>
+                    <div class="col col-6">
+                        <div class="paid-user-list">
+                            <div class="pd-us-title">
+                                {{spaceData[0].userType}}
+                            </div>
+                            <ul class="ac-user-count-list">
+                                <li>
+                                    <p>Total Active Users</p>
+                                    <h2 class="paid-number">{{spaceData[0].userCount}}</h2>
+                                </li>
+                                <li>
+                                    <p>Storage Limit</p>
+                                    <h2 class="paid-number">{{spaceData[0].totalSpaceAllowed}}</h2>
+                                </li>
+                                <li>
+                                    <p>Per Transfer Limit</p>
+                                    <h2 class="paid-number">{{spaceData[0].perFileUploadLimit}}</h2>
+                                </li>
+                            </ul>
+                            <button type="button" class="configure-paiduser" (click)="paidUserModal(spaceData[0].perFileUploadLimit,spaceData[0].totalSpaceAllowed,'Paid User',1)">Configure</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="freeUserConfiguration">
+    <p-dialog [header]='""' [modal]="true" [dismissableMask]="true" [draggable]="false" [(visible)]="displayfreeUserConfigurationModal"
+      [style]="{width: '390px'}" [baseZIndex]="10000">
+      <ng-template pTemplate="header">
+        <div class="freeuser-form-title">
+            <h3>Free User</h3>
+        </div>
+    </ng-template>
+      <div class="free-form-box">
+            <form class="free-form" [formGroup]="userConfigForm">
+            
+                <label>Per file upload limit</label><br>
+                <input type="text" [placeholder]=spaceData[1]?.perFileUploadLimit formControlName="perFileUploadLimit"><br>
+                
+                <label>Total Cloud Space</label><br>
+                <input type="text" [placeholder]=spaceData[1]?.totalSpaceAllowed formControlName="totalUserStorage"><br>
+            
+                <!-- <label>Data Expiry</label><br>
+                <input type="text" placeholder="10 Days"><br> -->
+                
+                
+                  <button pButton type="button" class=" update-btn" (click)="updateUserConfig()">Update</button>
+            </form>
+      </div>
+
+  
+    </p-dialog>
+  </div>
+  
+  <div class="paidUserConfiguration" >
+    <p-dialog [header]='""' [modal]="true" [dismissableMask]="true" [draggable]="false" [(visible)]="displaypaidUserConfigurationModal"
+      [style]="{width: '390px'}" [baseZIndex]="10000">
+      <ng-template pTemplate="header">
+        <div class="paiduser-form-title">
+            <h3>Paid User</h3>
+        </div>
+    </ng-template>
+      <div class="paid-form-box">
+            <form class="paid-form" [formGroup]="userConfigForm">
+            
+                <label>Per file upload limit</label><br>
+                <input type="text" [placeholder]=spaceData[0]?.perFileUploadLimit formControlName="perFileUploadLimit"><br>
+                
+                <label>Total Cloud Space</label><br>
+                <input type="text" [placeholder]=spaceData[0]?.totalSpaceAllowed formControlName="totalUserStorage"><br>
+            
+                <!-- <label>Data Expiry</label><br>
+                <input type="text" placeholder="Never"><br> -->
+                
+                
+                  <button pButton type="button" class=" paiduser-btn" (click)="updateUserConfig()">Update</button>
+            </form>
+      </div>
+
+    </p-dialog>
+  </div>

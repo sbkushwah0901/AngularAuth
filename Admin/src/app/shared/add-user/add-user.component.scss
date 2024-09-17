@@ -1,0 +1,108 @@
+// dialogbox create new user css start
+
+.create-form-title{
+    display: flex;
+    align-items: center;
+    h3{
+        margin: 0;
+        font-size: 16px;
+        line-height: 23px;
+        color: #000000;
+    }
+}
+:ng-deep .p-dialog-header{
+    padding: 0 !important;
+}
+.switch-create-user{
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    span{
+        display: inline-block;
+        padding: 0 10px;
+        text-transform: capitalize;
+        font-size: 14px;
+        color: #000000;
+        font-weight: 500;
+    }
+   
+}
+.type-create-user{
+    p{
+        margin:0;
+        color: #7A86A1;
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+.switch-create-user span:first-child {
+    padding-left: 0;
+}
+::ng-deep .p-dialog .dialog-header{
+    padding: 0 !important;
+}
+::ng-deep .createUser{
+   .p-dialog{
+        border-radius: 30px !important;
+    }
+    .p-element{
+        border-radius: 30px;
+        overflow: hidden;
+      }
+      .p-inputswitch{
+        height: 20px;
+    }
+    .p-inputswitch-slider{
+        padding: 12px;
+        background-color: #6149CD;
+    }
+    .p-inputswitch-checked {
+        .p-inputswitch-slider{
+        background: #6149CD!important;
+        &:hover{
+            background: #6149CD!important;
+        }
+      }
+    }
+    .p-inputswitch.p-component:hover{
+        color: #6149CD;
+    }
+}
+.create-form{
+label {
+    font-size: 12px;
+    line-height:17px;
+    color: #7A86A1;
+    font-weight: 500;
+  }
+  input {
+    height: 45px;
+    border-radius: 19px;
+    border: 1px solid #EBEBEB;
+    padding: 0 10px;
+    margin-bottom: 10px;
+  }
+  select{
+    height: 45px;
+    border-radius: 19px;
+    border: 1px solid #EBEBEB;
+    padding: 0 10px;
+    width: 100%;
+    background-color: transparent;
+    color: #7A86A1;
+    font-size: 16px;
+    line-height:17px;
+    color: #7A86A1;
+    font-weight: 500;
+  }
+  .create-new.user-btn{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: #6149CD;
+    height: 40px;
+    border: none;
+  }
+  
+}
